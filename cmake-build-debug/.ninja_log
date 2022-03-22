@@ -1,0 +1,21 @@
+# ninja log v5
+1	63	1647943972693206057	CMakeFiles/sistem_biblioteca_l.dir/io.c.o	f4c0e79fff14f5e1
+1	61	1647943292186298087	CMakeFiles/sistem_biblioteca_l.dir/linkedLists.c.o	7b66b23a5fdc55ae
+1	29	1647937806544478597	CMakeFiles/sistem_biblioteca_l.dir/carte.c.o	1c70fd6ecce5a06d
+1	34	1647943972663205772	CMakeFiles/sistem_biblioteca_l.dir/utils.c.o	76354e879ef24c65
+1	284	1646063766734984683	CMakeFiles/sistem_biblioteca_l.dir/cjson/cJSON.c.o	5cd787dcf4b11290
+60	97	1647944105901139667	sistem_biblioteca_l	9bddfe9ae89216ce
+0	26	1647937563718576596	build.ninja	83233426c1ba3e1c
+0	60	1647944105864472654	CMakeFiles/sistem_biblioteca_l.dir/main.c.o	4dc23564dca11040
+0	65	1647944132541391222	CMakeFiles/sistem_biblioteca_l.dir/main.c.o	4dc23564dca11040
+65	99	1647944132578058234	sistem_biblioteca_l	9bddfe9ae89216ce
+1	60	1647944152658247486	CMakeFiles/sistem_biblioteca_l.dir/main.c.o	4dc23564dca11040
+60	109	1647944152704914592	sistem_biblioteca_l	9bddfe9ae89216ce
+0	59	1647944207782098879	CMakeFiles/sistem_biblioteca_l.dir/main.c.o	4dc23564dca11040
+59	97	1647944207818765889	sistem_biblioteca_l	9bddfe9ae89216ce
+0	59	1647944280316110899	CMakeFiles/sistem_biblioteca_l.dir/main.c.o	4dc23564dca11040
+60	96	1647944280352777908	sistem_biblioteca_l	9bddfe9ae89216ce
+1	63	1647944346403393328	CMakeFiles/sistem_biblioteca_l.dir/main.c.o	4dc23564dca11040
+63	102	1647944346443393702	sistem_biblioteca_l	9bddfe9ae89216ce
+0	59	1647944408400635664	CMakeFiles/sistem_biblioteca_l.dir/main.c.o	4dc23564dca11040
+59	98	1647944408440636035	sistem_biblioteca_l	9bddfe9ae89216ce

@@ -1,0 +1,23 @@
+[{
+		"ISBN":	"sk",
+		"Title":	"Poezii",
+		"Price":	1337,
+		"Pages":	123,
+		"AuthorsLen":	3,
+		"Total":	5,
+		"Available":	4,
+		"GenresLen":	3,
+		"Genres":	["Gen1", "Gen2", "Gen3"],
+		"Authors":	["Autor1", "Autor2", "Autor3"]
+	}, {
+		"ISBN":	"isbn",
+		"Title":	"titlu",
+		"Price":	0,
+		"Pages":	1337281,
+		"AuthorsLen":	1,
+		"Total":	10,
+		"Available":	8,
+		"GenresLen":	1,
+		"Genres":	["poezie"],
+		"Authors":	["eminescu frt"]
+	}]
