@@ -183,3 +183,30 @@ Carte* BorrowByISBN(List* carti, char* isbn) {
     }
     return NULL;
 }
+
+int ReturnByISBN(List* carti, List* cartiUser, char* isbn) {
+    node* curr = cartiUser->head;
+    int ok=0;
+    while (curr!=NULL) {
+        if (strcmp(curr->carte->ISBN,isbn)==0) {
+            ok=1;
+            break;
+        }
+        curr = curr->next;
+    }
+    if (ok==0) return -1;
+    //daca continuam, am gasit cartea la utilizator
+
+    curr = carti->head;
+    while (curr != NULL) {
+        if (strcmp(curr->carte->ISBN,isbn)==0) {
+            if (curr->carte->Available>=0) {
+                curr->carte->Available++;
+                return 0;
+            }
+            return -1;
+        }
+        curr = curr->next;
+    }
+    return -1;
+}

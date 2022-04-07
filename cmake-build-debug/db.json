@@ -31,4 +31,26 @@
 		"GenresLen":	1,
 		"Genres":	["SF"],
 		"Authors":	["Marius"]
+	}, {
+		"ISBN":	"testisbn",
+		"Title":	"Motanul Incaltat",
+		"Price":	10,
+		"Pages":	10,
+		"AuthorsLen":	1,
+		"Total":	6,
+		"Available":	6,
+		"GenresLen":	1,
+		"Genres":	["Poveste"],
+		"Authors":	["Anonim"]
+	}, {
+		"ISBN":	"isbn_1234",
+		"Title":	"Abc",
+		"Price":	10,
+		"Pages":	10,
+		"AuthorsLen":	1,
+		"Total":	10,
+		"Available":	0,
+		"GenresLen":	1,
+		"Genres":	["SF"],
+		"Authors":	["Marius"]
 	}]

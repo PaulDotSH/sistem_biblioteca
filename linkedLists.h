@@ -6,6 +6,7 @@
 #define SISTEM_BIBLIOTECA_L_LINKEDLISTS_H
 
 #define JSON_PATH "db.json"
+#define USER_JSON_PATH "user.json"
 
 #include "carte.h"
 typedef struct node node;
@@ -19,7 +20,7 @@ struct List {
     node* head;
     int len;
 };
-
+int ReturnByISBN(List* carti, List* cartiUser, char* isbn);
 void Append(List* l, node* n);
 void DisplayNode(node* n);
 void Display(List* l);

@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: sistem_biblioteca_l
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-debug/
+cmake_ninja_workdir = /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-release/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-debug && /home/administrator/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/cmake/linux/bin/cmake --regenerate-during-build -S/media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca -B/media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-debug
+  COMMAND = cd /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-release && /home/administrator/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/cmake/linux/bin/cmake --regenerate-during-build -S/media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca -B/media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-release
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-debug && /home/administrator/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-release && /home/administrator/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.7172.20/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -72,39 +72,39 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_sistem_biblioteca_l: phony || CMakeFiles/sistem_biblioteca_l.dir
 
-build CMakeFiles/sistem_biblioteca_l.dir/main.c.o: C_COMPILER__sistem_biblioteca_l_Debug /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/main.c || cmake_object_order_depends_target_sistem_biblioteca_l
+build CMakeFiles/sistem_biblioteca_l.dir/main.c.o: C_COMPILER__sistem_biblioteca_l_Release /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/main.c || cmake_object_order_depends_target_sistem_biblioteca_l
   DEP_FILE = CMakeFiles/sistem_biblioteca_l.dir/main.c.o.d
-  FLAGS = -g -std=gnu2x
+  FLAGS = -O3 -DNDEBUG -std=gnu2x
   OBJECT_DIR = CMakeFiles/sistem_biblioteca_l.dir
   OBJECT_FILE_DIR = CMakeFiles/sistem_biblioteca_l.dir
 
-build CMakeFiles/sistem_biblioteca_l.dir/cjson/cJSON.c.o: C_COMPILER__sistem_biblioteca_l_Debug /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cjson/cJSON.c || cmake_object_order_depends_target_sistem_biblioteca_l
+build CMakeFiles/sistem_biblioteca_l.dir/cjson/cJSON.c.o: C_COMPILER__sistem_biblioteca_l_Release /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cjson/cJSON.c || cmake_object_order_depends_target_sistem_biblioteca_l
   DEP_FILE = CMakeFiles/sistem_biblioteca_l.dir/cjson/cJSON.c.o.d
-  FLAGS = -g -std=gnu2x
+  FLAGS = -O3 -DNDEBUG -std=gnu2x
   OBJECT_DIR = CMakeFiles/sistem_biblioteca_l.dir
   OBJECT_FILE_DIR = CMakeFiles/sistem_biblioteca_l.dir/cjson
 
-build CMakeFiles/sistem_biblioteca_l.dir/linkedLists.c.o: C_COMPILER__sistem_biblioteca_l_Debug /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/linkedLists.c || cmake_object_order_depends_target_sistem_biblioteca_l
+build CMakeFiles/sistem_biblioteca_l.dir/linkedLists.c.o: C_COMPILER__sistem_biblioteca_l_Release /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/linkedLists.c || cmake_object_order_depends_target_sistem_biblioteca_l
   DEP_FILE = CMakeFiles/sistem_biblioteca_l.dir/linkedLists.c.o.d
-  FLAGS = -g -std=gnu2x
+  FLAGS = -O3 -DNDEBUG -std=gnu2x
   OBJECT_DIR = CMakeFiles/sistem_biblioteca_l.dir
   OBJECT_FILE_DIR = CMakeFiles/sistem_biblioteca_l.dir
 
-build CMakeFiles/sistem_biblioteca_l.dir/carte.c.o: C_COMPILER__sistem_biblioteca_l_Debug /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/carte.c || cmake_object_order_depends_target_sistem_biblioteca_l
+build CMakeFiles/sistem_biblioteca_l.dir/carte.c.o: C_COMPILER__sistem_biblioteca_l_Release /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/carte.c || cmake_object_order_depends_target_sistem_biblioteca_l
   DEP_FILE = CMakeFiles/sistem_biblioteca_l.dir/carte.c.o.d
-  FLAGS = -g -std=gnu2x
+  FLAGS = -O3 -DNDEBUG -std=gnu2x
   OBJECT_DIR = CMakeFiles/sistem_biblioteca_l.dir
   OBJECT_FILE_DIR = CMakeFiles/sistem_biblioteca_l.dir
 
-build CMakeFiles/sistem_biblioteca_l.dir/io.c.o: C_COMPILER__sistem_biblioteca_l_Debug /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/io.c || cmake_object_order_depends_target_sistem_biblioteca_l
+build CMakeFiles/sistem_biblioteca_l.dir/io.c.o: C_COMPILER__sistem_biblioteca_l_Release /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/io.c || cmake_object_order_depends_target_sistem_biblioteca_l
   DEP_FILE = CMakeFiles/sistem_biblioteca_l.dir/io.c.o.d
-  FLAGS = -g -std=gnu2x
+  FLAGS = -O3 -DNDEBUG -std=gnu2x
   OBJECT_DIR = CMakeFiles/sistem_biblioteca_l.dir
   OBJECT_FILE_DIR = CMakeFiles/sistem_biblioteca_l.dir
 
-build CMakeFiles/sistem_biblioteca_l.dir/utils.c.o: C_COMPILER__sistem_biblioteca_l_Debug /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/utils.c || cmake_object_order_depends_target_sistem_biblioteca_l
+build CMakeFiles/sistem_biblioteca_l.dir/utils.c.o: C_COMPILER__sistem_biblioteca_l_Release /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/utils.c || cmake_object_order_depends_target_sistem_biblioteca_l
   DEP_FILE = CMakeFiles/sistem_biblioteca_l.dir/utils.c.o.d
-  FLAGS = -g -std=gnu2x
+  FLAGS = -O3 -DNDEBUG -std=gnu2x
   OBJECT_DIR = CMakeFiles/sistem_biblioteca_l.dir
   OBJECT_FILE_DIR = CMakeFiles/sistem_biblioteca_l.dir
 
@@ -116,8 +116,8 @@ build CMakeFiles/sistem_biblioteca_l.dir/utils.c.o: C_COMPILER__sistem_bibliotec
 #############################################
 # Link the executable sistem_biblioteca_l
 
-build sistem_biblioteca_l: C_EXECUTABLE_LINKER__sistem_biblioteca_l_Debug CMakeFiles/sistem_biblioteca_l.dir/main.c.o CMakeFiles/sistem_biblioteca_l.dir/cjson/cJSON.c.o CMakeFiles/sistem_biblioteca_l.dir/linkedLists.c.o CMakeFiles/sistem_biblioteca_l.dir/carte.c.o CMakeFiles/sistem_biblioteca_l.dir/io.c.o CMakeFiles/sistem_biblioteca_l.dir/utils.c.o
-  FLAGS = -g
+build sistem_biblioteca_l: C_EXECUTABLE_LINKER__sistem_biblioteca_l_Release CMakeFiles/sistem_biblioteca_l.dir/main.c.o CMakeFiles/sistem_biblioteca_l.dir/cjson/cJSON.c.o CMakeFiles/sistem_biblioteca_l.dir/linkedLists.c.o CMakeFiles/sistem_biblioteca_l.dir/carte.c.o CMakeFiles/sistem_biblioteca_l.dir/io.c.o CMakeFiles/sistem_biblioteca_l.dir/utils.c.o
+  FLAGS = -O3 -DNDEBUG
   OBJECT_DIR = CMakeFiles/sistem_biblioteca_l.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -133,7 +133,7 @@ build sistem_biblioteca_l: C_EXECUTABLE_LINKER__sistem_biblioteca_l_Debug CMakeF
 # =============================================================================
 
 #############################################
-# Folder: /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-debug
+# Folder: /media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-release
 
 build all: phony sistem_biblioteca_l
 

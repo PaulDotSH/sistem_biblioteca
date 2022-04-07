@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/admin/CLionProjects/sistem_biblioteca_l/cmake-build-debug",
-		"source" : "/home/admin/CLionProjects/sistem_biblioteca_l"
+		"build" : "/media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca/cmake-build-debug",
+		"source" : "/media/administrator/c7b3562e-7e25-4218-bf38-64c479d931a8/git-stuff/sistem_biblioteca"
 	},
 	"version" : 
 	{

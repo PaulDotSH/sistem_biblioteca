@@ -7,7 +7,9 @@
 
 #define mesaj "Daca operatia a fost valida aceasta a fost rulata cu succes\n"
 
-enum command {add,delete,list,search,borrow,save,quit,help,clear};
+enum command {add,delete,list,search,ret,borrow,save,quit,help,clear};
+
+List* cartiUser;
 
 void clear_screen()
 {
@@ -35,6 +37,8 @@ int parseCommand(char* cmd) {
         return quit;
     if (strcmp(cmd,"clear\n")==0)
         return clear;
+    if (strcmp(cmd,"ret\n")==0 || strcmp(cmd,"return\n")==0)
+        return ret;
     if (strcmp(cmd,"help\n")==0)
         return help;
     return -1;
@@ -159,7 +163,14 @@ void AfisareBorrowOptiuni(List* carti) {
             char input[100];
             fgets(input,100,stdin);
             StrcpyWithoutNewline(input,input);
-            (BorrowByISBN(carti,input)) ? printf("Ai imprumutat cartea cu succes\n") : printf("Nu sunt destule in stoc sau cartea nu exista\n");
+            //adauga intr o lista a cartilor pe care le are utilizatorul
+
+            Carte* ret = BorrowByISBN(carti,input);
+            if (ret) {
+                Append(cartiUser, CreateNode(ret));
+                return;
+            }
+            printf("Nu sunt destule in stoc sau cartea nu exista\n");
         }
             break;
     }
@@ -184,12 +195,20 @@ void AfisareReturnOptiuni(List* carti) {
             fgets(input,100,stdin);
             StrcpyWithoutNewline(input,input);
             //da un check aici daca cartea e in lista utilizatorului
+            if (ReturnByISBN(carti,cartiUser,input) == 0) {
+                DeleteByISBN(cartiUser,input);
+                printf("Ai returnat cartea!\n");
+                return;
+            } printf("S-a produs o eroare :(\n");
         }
             break;
     }
 }
 
 int main() {
+    cartiUser = malloc(sizeof(List));
+    cartiUser->head = 0;
+    cartiUser = ReadCarti(USER_JSON_PATH);
     List* carti = ReadCarti(JSON_PATH);
     AfisareOptiuni();
     char input[MAX_STRING_LENGTH];
@@ -207,15 +226,19 @@ int main() {
                 return 0;
             case add:
                 Append(carti, CreateNode(ReadCarte()));
+                SaveCarti(JSON_PATH,carti);
                 break;
             case list:
                 Display(carti);
                 break;
             case borrow:
                 AfisareBorrowOptiuni(carti);
+                SaveCarti(JSON_PATH,carti);
+                SaveCarti(USER_JSON_PATH,cartiUser);
                 break;
             case save:
                 SaveCarti(JSON_PATH,carti);
+                SaveCarti(USER_JSON_PATH,cartiUser);
                 printf(mesaj);
                 break;
             case search:
@@ -226,11 +249,17 @@ int main() {
             case help:
                 AfisareOptiuni();
                 break;
+            case ret:
+                AfisareReturnOptiuni(carti);
+                SaveCarti(JSON_PATH,carti);
+                SaveCarti(USER_JSON_PATH,cartiUser);
+                break;
             case clear:
                 clear_screen();
                 break;
             case delete:
                 AfisareDeleteOptiuni(carti);
+                SaveCarti(JSON_PATH,carti);
                 WaitNext();
                 break;
             default:
