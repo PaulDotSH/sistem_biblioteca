@@ -146,7 +146,7 @@ Carte* ReadCarte() {
         WaitNext();
         //strcpyWithoutNewline(carte->Genres[i],carte->Genres[i]);
     }
-    fflush(stdin);
+
     printf("Introdu numarul de pagini\n");
     scanf("%d",&carte->Pages);
     printf("Introdu pretul cartii\n");
@@ -154,7 +154,7 @@ Carte* ReadCarte() {
     printf("Introdu stocul total\n");
     scanf("%d",&carte->Total);
     printf("Introdu stocul prezent\n");
-    scanf("%d",&carte->Available);
+    scanf("%d\n",&carte->Available);
 
     return carte;
 }

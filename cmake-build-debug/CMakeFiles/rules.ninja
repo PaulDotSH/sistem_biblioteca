@@ -42,7 +42,7 @@ rule C_EXECUTABLE_LINKER__sistem_biblioteca_l_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/admin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/admin/CLionProjects/sistem_biblioteca_l -B/home/admin/CLionProjects/sistem_biblioteca_l/cmake-build-debug
+  command = /home/admin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/admin/CLionProjects/sistem_biblioteca -B/home/admin/CLionProjects/sistem_biblioteca/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

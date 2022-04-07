@@ -220,8 +220,8 @@ int main() {
                 break;
             case search:
                 AfisareSearchOptiuni(carti);
-                WaitNext2();
-                //WaitNext();
+                //WaitNext2();
+                WaitNext();
                 break;
             case help:
                 AfisareOptiuni();

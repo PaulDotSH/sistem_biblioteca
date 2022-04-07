@@ -1,4 +1,16 @@
-/home/admin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/admin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/bin/ninja/linux/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja /home/admin/CLionProjects/sistem_biblioteca_l
+/home/admin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/admin/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/213.6461.75/bin/ninja/linux/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja /home/admin/CLionProjects/sistem_biblioteca
+-- The C compiler identification is GNU 11.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/admin/CLionProjects/sistem_biblioteca_l/cmake-build-debug
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CXX_COMPILER
+
+
+-- Build files have been written to: /home/admin/CLionProjects/sistem_biblioteca/cmake-build-debug
