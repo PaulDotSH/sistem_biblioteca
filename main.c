@@ -11,6 +11,15 @@ enum command {add,delete,list,search,ret,borrow,save,quit,help,clear};
 
 List* cartiUser;
 
+#define ANSI_COLOR_RED     "\x1b[31m"
+#define ANSI_COLOR_GREEN   "\x1b[32m"
+#define ANSI_COLOR_YELLOW  "\x1b[33m"
+#define ANSI_COLOR_BLUE    "\x1b[34m"
+#define ANSI_COLOR_MAGENTA "\x1b[35m"
+#define ANSI_COLOR_CYAN    "\x1b[36m"
+#define ANSI_COLOR_RESET   "\x1b[0m"
+
+
 void clear_screen()
 {
 #ifdef WINDOWS
@@ -45,15 +54,15 @@ int parseCommand(char* cmd) {
 }
 
 void AfisareOptiuni() {
-    printf("Scrie o comanda pentru a interactiona cu programul\n");
+    printf(ANSI_COLOR_GREEN "Scrie o comanda pentru a interactiona cu programul\n" ANSI_COLOR_RESET);
     printf("Comenziile prezente momentan sunt:\n");
-    printf("add, delete/del, list, search, borrow, return, save/s, quit/q, help\n");
+    printf(ANSI_COLOR_RED "add, delete/del, list, search, borrow, return, save/s, quit/q, help\n" ANSI_COLOR_RESET);
 }
 
 void AfisareDeleteOptiuni(List* carti) {
     int optiune;
     do {
-        printf("0. Back\n");
+        printf(ANSI_COLOR_YELLOW "0. Back\n" ANSI_COLOR_RESET);
         printf("1. Delete dupa index\n");
         printf("2. Delete dupa ISBN\n");
         scanf("%d", &optiune);
@@ -73,7 +82,7 @@ void AfisareDeleteOptiuni(List* carti) {
                 return;
             }
             DeleteByIndex(carti, index);
-            printf(mesaj);
+            printf(ANSI_COLOR_CYAN mesaj ANSI_COLOR_RESET);
         }
             break;
         case 2:
@@ -84,7 +93,7 @@ void AfisareDeleteOptiuni(List* carti) {
             fgets(input,100,stdin);
             StrcpyWithoutNewline(input,input);
             DeleteByISBN(carti,input);
-            printf(mesaj);
+            printf(ANSI_COLOR_CYAN mesaj ANSI_COLOR_RESET);
         }
             break;
     }
@@ -93,7 +102,7 @@ void AfisareDeleteOptiuni(List* carti) {
 void AfisareSearchOptiuni(List* carti) {
     int optiune;
     do {
-        printf("0. Back\n");
+        printf(ANSI_COLOR_YELLOW "0. Back\n" ANSI_COLOR_RESET);
         printf("1. Cauta carti disponibile\n");
         printf("2. Cauta carti dupa titlu\n");
         printf("3. Cauta carti dupa autor\n");
@@ -117,7 +126,7 @@ void AfisareSearchOptiuni(List* carti) {
             fgets(input,100,stdin);
             StrcpyWithoutNewline(input,input);
             DisplayByTitle(carti,input);
-            printf(mesaj);
+            printf(ANSI_COLOR_CYAN mesaj ANSI_COLOR_RESET);
         }
             break;
         case 3:
@@ -128,7 +137,7 @@ void AfisareSearchOptiuni(List* carti) {
             fgets(input,100,stdin);
             StrcpyWithoutNewline(input,input);
             DisplayByAutor(carti,input);
-            printf(mesaj);
+            printf(ANSI_COLOR_CYAN mesaj ANSI_COLOR_RESET);
         }
             break;
         case 4:
@@ -139,7 +148,7 @@ void AfisareSearchOptiuni(List* carti) {
             fgets(input,100,stdin);
             StrcpyWithoutNewline(input,input);
             DisplayByGenre(carti,input);
-            printf(mesaj);
+            printf(ANSI_COLOR_CYAN mesaj ANSI_COLOR_RESET);
         }
             break;
     }
@@ -148,7 +157,7 @@ void AfisareSearchOptiuni(List* carti) {
 void AfisareBorrowOptiuni(List* carti) {
     int optiune;
     do {
-        printf("0. Back\n");
+        printf(ANSI_COLOR_YELLOW "0. Back\n" ANSI_COLOR_RESET);
         printf("1. Imprumuta dupa ISBN\n");
         scanf("%d", &optiune);
         clear_screen();
@@ -170,7 +179,7 @@ void AfisareBorrowOptiuni(List* carti) {
                 Append(cartiUser, CreateNode(ret));
                 return;
             }
-            printf("Nu sunt destule in stoc sau cartea nu exista\n");
+            printf(ANSI_COLOR_RED "Nu sunt destule in stoc sau cartea nu exista\n" ANSI_COLOR_RESET);
         }
             break;
     }
@@ -179,7 +188,7 @@ void AfisareBorrowOptiuni(List* carti) {
 void AfisareReturnOptiuni(List* carti) {
     int optiune;
     do {
-        printf("0. Back\n");
+        printf(ANSI_COLOR_YELLOW "0. Back\n" ANSI_COLOR_RESET);
         printf("1. Returneaza dupa ISBN\n");
         scanf("%d", &optiune);
         clear_screen();
@@ -190,22 +199,25 @@ void AfisareReturnOptiuni(List* carti) {
         case 1:
         {
             WaitNext();
-            printf("Introdu ISBN\n");
+            printf("Introdu ISBN-ul\n");
             char input[100];
             fgets(input,100,stdin);
             StrcpyWithoutNewline(input,input);
             //da un check aici daca cartea e in lista utilizatorului
             if (ReturnByISBN(carti,cartiUser,input) == 0) {
                 DeleteByISBN(cartiUser,input);
-                printf("Ai returnat cartea!\n");
+                printf(ANSI_COLOR_GREEN "Ai returnat cartea!\n" ANSI_COLOR_RESET);
                 return;
-            } printf("S-a produs o eroare :(\n");
+            } printf(ANSI_COLOR_RED "S-a produs o eroare :(\n" ANSI_COLOR_RESET);
+
         }
             break;
     }
 }
 
 int main() {
+
+
     cartiUser = malloc(sizeof(List));
     cartiUser->head = 0;
     cartiUser = ReadCarti(USER_JSON_PATH);
@@ -220,7 +232,6 @@ int main() {
             continue;
         }
         clear_screen();
-        //printf("Cmd: %d\n",cmd);
         switch (cmd) {
             case quit:
                 return 0;
@@ -239,7 +250,7 @@ int main() {
             case save:
                 SaveCarti(JSON_PATH,carti);
                 SaveCarti(USER_JSON_PATH,cartiUser);
-                printf(mesaj);
+                printf(ANSI_COLOR_RED mesaj ANSI_COLOR_RESET);
                 break;
             case search:
                 AfisareSearchOptiuni(carti);

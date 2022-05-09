@@ -21,6 +21,7 @@ struct List {
     int len;
 };
 int ReturnByISBN(List* carti, List* cartiUser, char* isbn);
+
 void Append(List* l, node* n);
 void DisplayNode(node* n);
 void Display(List* l);
@@ -30,6 +31,8 @@ node* CreateNode(Carte* carte);
 List* ReadCarti(char* filename);
 void DeleteByIndex(List* l, int index);
 void DeleteByISBN(List* l, char* isbn);
+
+
 void DisplayByAutor(List* carti, char* autor);
 void DisplayByTitle(List* carti, char* titlu);
 void DisplayCartiDisponibile(List* carti);
