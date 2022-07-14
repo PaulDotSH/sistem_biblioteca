@@ -14,15 +14,12 @@ List* cartiUser;
 #define ANSI_COLOR_RED     "\x1b[31m"
 #define ANSI_COLOR_GREEN   "\x1b[32m"
 #define ANSI_COLOR_YELLOW  "\x1b[33m"
-#define ANSI_COLOR_BLUE    "\x1b[34m"
-#define ANSI_COLOR_MAGENTA "\x1b[35m"
 #define ANSI_COLOR_CYAN    "\x1b[36m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
 
-
 void clear_screen()
 {
-#ifdef WINDOWS
+#ifdef _WIN32
     system("cls");
 #else
     system("clear");
@@ -215,9 +212,10 @@ void AfisareReturnOptiuni(List* carti) {
     }
 }
 
+// Mai trebuie adaugate cateva chestii, mesaj afisat la inceput, mesaj dupa fiecare comanda etc
+// Nu mai am codul sursa cu toate fixurile dar asta e 95% gata
+
 int main() {
-
-
     cartiUser = malloc(sizeof(List));
     cartiUser->head = 0;
     cartiUser = ReadCarti(USER_JSON_PATH);

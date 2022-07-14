@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/sistem_biblioteca_l.dir/main.c.o CMakeFiles/sistem_biblioteca_l.dir/cjson/cJSON.c.o CMakeFiles/sistem_biblioteca_l.dir/linkedLists.c.o CMakeFiles/sistem_biblioteca_l.dir/carte.c.o CMakeFiles/sistem_biblioteca_l.dir/io.c.o CMakeFiles/sistem_biblioteca_l.dir/utils.c.o -o sistem_biblioteca_l 
